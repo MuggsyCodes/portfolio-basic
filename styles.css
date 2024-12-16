@@ -1,0 +1,168 @@
+/*  Basic reset  */
+/* Browsers have default styling that we want to override */
+/* asterix applies to all */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  color: black;
+  background-color: white;
+  height: 100vh; /* height of window or viewport */
+  width: 100vw;
+  overflow: hidden; /* hide anything that falls off page */
+}
+
+/* main containder for everything */
+main {
+  display: flex;
+  flex-direction: row;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Name and Image Section */
+section#name {
+  width: 40%;
+  height: 100vh;
+}
+
+/* Text Content */
+h1 {
+  font-size: 50px;
+  font-weight: 400;
+  letter-spacing: 0.25rem;
+}
+
+h2 {
+  font-weight: 200;
+  letter-spacing: 0.2rem;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 200;
+}
+
+p {
+  font-size: 20px;
+  font-weight: 200;
+  line-height: 1.8rem;
+}
+
+hr {
+  border: none;
+  height: 1px;
+  background-color: black;
+}
+
+/* Buttons */
+.dark-btn {
+  background-color: black;
+  color: white;
+  width: 300px;
+  padding: 15px 0;
+  font-size: 16px;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Psuedo selector - Hover animation */
+
+.dark-btn:hover {
+  transform: rotate(-3deg) translateY(-10px);
+}
+
+.outline-button {
+  background-color: transparent;
+  color: black;
+  width: 200px;
+  padding: 15px 0;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 0.1rem;
+  border: 1px solid black;
+  transition-duration: 300ms;
+  transition-timing-function: ease-in-out;
+  cursor: pointer;
+}
+
+.outline-button:hover {
+  background-color: black;
+  color: white;
+}
+
+section#name img {
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+}
+
+section#name > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 60%;
+  gap: 50px;
+  padding: 150px;
+}
+
+/* About Section */
+section#about {
+  width: 60%;
+  height: 100vh;
+  background-color: #7eede6;
+  position: relative;
+}
+
+#about-me-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 75%;
+  margin: auto;
+  padding-bottom: 100px;
+}
+
+#social-btns {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  gap: 30px;
+  position: absolute; /* relative position to some parent container */
+  bottom: 3.4rem;
+  right: 5rem;
+}
+
+#social-btns img {
+  width: 30px;
+  height: 30px;
+}
+
+#social-btns img:hover {
+  cursor: pointer;
+  transform: scale(130%);
+}
+
+#btns-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+/* section selector, #, overrides general template 
+#section {
+    margin: 10px;
+
+}
+*/
